@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Wallet Connector</title>
+    <style>
+        :root {
+            /* Warna khas Solana */
+            --solana-purple: #9945FF;
+            --solana-blue: #14F195;
+            --background-dark: #121212;
+            --text-light: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .wallet-connector {
+            background: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px); /* Efek kaca buram (optional) */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            width: 100%; /* Responsif */
+            transition: all 0.3s ease;
+        }
+
+        .wallet-connector:hover {
+            box-shadow: 0 16px 64px 0 rgba(147, 86, 226, 0.4);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            /* Gradient pada teks header */
+            background: linear-gradient(90deg, var(--solana-purple), var(--solana-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .connect-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            /* Gradient utama pada tombol */
+            background-image: linear-gradient(45deg, var(--solana-purple) 0%, var(--solana-blue) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(153, 69, 255, 0.4);
+        }
+
+        .connect-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(20, 241, 149, 0.6);
+        }
+
+        .connect-button:active {
+            transform: translateY(0);
+        }
+
+        /* Media Query untuk Responsif (Jika perlu ada penyesuaian lebih lanjut) */
+        @media (max-width: 600px) {
+            .wallet-connector {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .connect-button {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wallet-connector">
+    <h2>Connect Your Wallet</h2>
+
+    <p style="margin-bottom: 30px; opacity: 0.8;">Hubungkan dompet Solana Anda untuk melanjutkan.</p>
+
+    <button class="connect-button" onclick="alert('Fungsi koneksi akan dipanggil di sini')">
+        CONNECT
+    </button>
+</div>
+
+</body>
+</html>
